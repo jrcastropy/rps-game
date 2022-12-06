@@ -66,7 +66,7 @@ class CApp(Resource):
         else:
             hn = 'no sign detected'
 
-        return jsonify({'resutl':hn})
+        return jsonify({'result':hn})
 
 api.add_resource(CApp, '/')
 
