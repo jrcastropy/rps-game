@@ -61,7 +61,7 @@ class GestureRecognition:
 
 class MediaPipeHand:
     def __init__(self, static_image_mode=True, max_num_hands=1,
-        model_complexity=1, intrin=None):
+        model_complexity=0, intrin=None):
         self.max_num_hands = max_num_hands
         if intrin is None:
             self.intrin = intrin_default

@@ -56,19 +56,21 @@ class CApp(Resource):
         for p in param:
             if p['class'] is not None:
                 gesture = gest.eval(p['angle'])  
-
+        print(gesture)
         if gesture == 'fist' or gesture == 'one':
             hn = 'rock'
         elif gesture == 'five':
             hn = 'paper'
         elif gesture == 'yeah':
-            hn = 'paper'
+            hn = 'scissors'
+        elif gesture == 'three':
+            hn = 'scissors'
         else:
-            hn = 'no sign detected'
+            hn = 'none'
 
         return jsonify({'result':hn})
 
 api.add_resource(CApp, '/')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=1234, debug=True)
+    app.run(host='0.0.0.0', port=1234, debug=False)
